@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>PHP Calculator</h1>
+
+    <hr>
+
+    <?php if ($error) : ?>
+        <div>
+            <h2>Error!</h2>
+            <p><?= $error ?></p>
+        </div>
+    <?php endif; ?>
+
+    <form action="/calculate.php" method="post">
+        <label for="">
+            <input type="number" name="num1" placeholder="Enter first number" required value="<?= $num1?>">
+        </label>
+        <label for="">
+            <select name="op" >
+                <option value="sum" <?= markSelectedOperation('sum') ?> >+</option>
+                <option value="sub" <?= markSelectedOperation('sub') ?> >-</option>
+                <option value="multiply" <?= markSelectedOperation('multiply') ?> >*</option>
+                <option value="division" <?= markSelectedOperation('division') ?> >/</option>
+                <option value="power" <?= markSelectedOperation('power') ?> >^</option>
+            </select>
+        </label>
+        <label for="">
+            <input type="number" name="num2" placeholder="Enter second number" required value="<?= $num2 ?>">
+        </label>
+
+        <button type="submit" name="submit">=</button>
+
+        <!--<span> <?php echo $total; ?> </span>-->
+        <span><?= $total ?></span>
+    </form>
+
+</body>
+
+</html>
