@@ -1,0 +1,23 @@
+{
+    "name": "flag/contact-manager",
+    "description": "project",
+    "autoload": {
+        "psr-4": {
+            "Flag\\Core\\": "src/Core",
+            "Flag\\App\\": "src/App"
+        }
+    },
+    "authors": [
+        {
+            "name": "EllenMarin",
+            "email": "82092612+EllenMarin@users.noreply.github.com"
+        }
+    ],
+    "scripts": {
+        "dev": "php -S localhost:8080 -t public"
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "require": {}
+}
